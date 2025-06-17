@@ -1,0 +1,94 @@
+= Forwords: A Forward-only Writing App
+
+Forwords is a minimalist writing tool designed to help you focus on writing by providing a clean interface and tracking your word count. It comes in two flavors, both designed to work seamlessly across platforms:
+
+1. link:docs/pages/bash-version.adoc[CLI Version]: A lightweight Bash script that runs in any Unix-like terminal (macOS, Linux)
+2. link:docs/pages/gui-version.adoc[GUI Version]: A cross-platform PyQt5-based desktop application (macOS, Windows, Linux)
+
+== Quick Starts
+
+=== Terminal Version
+[source,bash]
+----
+chmod +x forwords.sh
+./forwords.sh
+----
+
+=== GUI Version
+[source,bash]
+----
+pip install PyQt5
+python3 forwords.py
+----
+
+== Shared Configuration File
+
+Both the CLI and GUI versions support a shared configuration file: `~/Forwords/.forwords.config`.
+* The config file uses simple `key: value` pairs (see `docs/forwords.config.example` for a template and documentation).
+* If you use both CLI and GUI, be aware that changes made in the GUI may overwrite manual edits or comments in this file.
+* *Windows users:* Use WSL or Cygwin and place the config file in your Unix home directory (e.g., `/home/YourName/Forwords/.forwords.config`).
+
+== Philosophy
+
+Forwords is designed to help you focus on writing by:
+* Providing a clean, distraction-free interface
+* Tracking your word count
+* Encouraging forward-only writing
+* Automatically saving your work
+
+== License
+
+This project is licensed under the terms of the LICENSE file included in this repository.
+
+== GUI Version
+
+The GUI version provides a truly distraction-free writing environment with:
+
+Minimal interface:: Only essential controls (theme and font size)
+Configuration-driven:: All settings controlled via `~/Forwords/.forwords.config` file to remove distractions while writing
+No manuscript management:: Manuscript file is set in `.forwords.config` and cannot be changed from GUI
+Real-time word counting:: Session and total word counts
+Theme support:: Light and dark themes (saved to config)
+Keyboard shortcuts:: Enter (save sentence)
+
+=== Banner Styles (configured in `.forwords.config`)
+
+The GUI supports three banner styles, controlled by the `DEFAULT_BANNER` setting:
+
+1. *Quote* - Displays random writing quotes from `~/Forwords/Resources/quotes.txt`
+2. *Note* - Displays a custom message from `~/Forwords/Resources/note.txt` (create this file manually)
+3. *Prompt* - Generates random writing prompts
+
+To use the "Note" style, create a `~/Forwords/Resources/note.txt` file with your custom message.
+
+=== Configuration
+
+All settings are controlled through the `~/Forwords/.forwords.config` file:
+
+SAVE_FILE:: Path to your manuscript file
+BANNER_COLOR:: Banner color (blue, red, green, yellow, magenta, cyan, white)
+DEFAULT_BANNER:: Banner style (Quote, Note, Prompt)
+GUI_THEME:: Theme (light, dark) - can be changed in GUI
+GUI_FONT_SIZE:: Font size (8-24) - can be changed in GUI
+
+== CLI Version
+
+The CLI version provides a distraction-free writing environment in your terminal:
+
+[source,bash]
+----
+chmod +x forwords.sh
+./forwords.sh
+----
+
+The CLI version automatically uses your configured banner style from `~/Forwords/.forwords.config` and provides the same writing experience as the GUI version.
+
+[TIP]
+====
+Since Forwords stores everything in `~/Forwords/`, you can easily back up your manuscripts and resources with git:
+
+[source,bash]
+----
+cd ~/Forwords && git init && git add Manuscripts/ Resources/ && git commit -m "Backup"
+----
+==== 

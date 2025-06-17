@@ -1,0 +1,142 @@
+= Forwords Configuration Guide
+
+This document explains all configuration options for Forwords. The configuration file is located at `~/Forwords/.forwords.config` by default.
+
+== Quick Start
+
+1. Copy `docs/forwords.config.example` to `~/Forwords/.forwords.config`
+2. Edit the file to customize your settings
+3. All values are case-insensitive for convenience
+
+== Configuration File Location
+
+By default, the configuration file is located at `~/Forwords/.forwords.config`. If you prefer to keep it in your home directory, you can create a symlink:
+
+[source,bash]
+----
+ln -s ~/Forwords/.forwords.config ~/.forwords.config
+----
+
+== Settings Reference
+
+=== SAVE_FILE
+
+*Purpose*: Specifies where your manuscript will be saved.
+
+*Formats*:
+* *Relative path* (recommended): `manuscript.txt` or `MyNovel.txt`
+* *Absolute path* (advanced): `/home/username/Writing/MyNovel.txt`
+
+*Examples*:
+[source]
+----
+SAVE_FILE: manuscript.txt                    # -> ~/Forwords/Manuscripts/manuscript.txt
+SAVE_FILE: MyNovel.txt                       # -> ~/Forwords/Manuscripts/MyNovel.txt
+SAVE_FILE: /home/user/Writing/MyNovel.txt    # -> /home/user/Writing/MyNovel.txt
+----
+
+*Notes*:
+* Relative paths use the default Forwords directory structure
+* Absolute paths override the default structure
+* The directory will be created automatically if it doesn't exist
+
+=== BANNER_COLOR
+
+*Purpose*: Sets the color of the banner text in the GUI. The choice is case-insensitive.
+
+*Options*: `blue`, `green`, `red`, `yellow`, `magenta`, `cyan`, `white`
+
+*Example*:
+[source]
+----
+BANNER_COLOR: red
+----
+
+=== DEFAULT_BANNER
+
+*Purpose*: Controls what appears at the top of the GUI. The choice is case-insensitive.
+
+*Options*:
+* *Quote*: Displays random writing quotes from `~/Forwords/Resources/quotes.txt`
+* *Note*: Displays a custom message from `~/Forwords/Resources/note.txt`
+* *Prompt*: Generates a new random writing prompt every time
+
+*Examples*:
+[source]
+----
+DEFAULT_BANNER: Quote    # Shows random writing quotes
+DEFAULT_BANNER: Note     # Shows your custom note
+DEFAULT_BANNER: Prompt   # Shows random writing prompts
+----
+
+=== GUI_THEME
+
+*Purpose*: Sets the visual theme for the GUI. The CLI ignores this setting. The choice is case-insensitive.
+
+*Options*: `light`, `dark`
+
+*Example*:
+[source]
+----
+GUI_THEME: dark
+----
+
+=== GUI_FONT_SIZE
+
+*Purpose*: Sets the font size for the input field in the GUI. The CLI ignores this setting.
+
+*Range*: 8-24
+
+*Example*:
+[source]
+----
+GUI_FONT_SIZE: 14
+----
+
+== Resource Files
+
+=== Quotes File (`~/Forwords/Resources/quotes.txt`)
+
+This app comes with a pre-filled quotes file, but you can recreate this file manually with your favorite writing quotes, one per line:
+
+[source]
+----
+Write, even on the bad days. You can fix it on the good days.
+The first draft is just you telling yourself the story.
+A word after a word after a word is power.
+----
+
+=== Note File (`~/Forwords/Resources/note.txt`)
+
+Create this file with your custom message for the Note banner style:
+
+[source]
+----
+Write something amazing today!
+----
+
+Or:
+
+[source]
+----
+Remember, Lucy hates Clyde!
+----
+
+== Directory Structure
+
+The default Forwords directory structure is:
+
+[source]
+----
+~/Forwords/
+├── .forwords.config      # Configuration file
+├── Manuscripts/         # Your manuscript files
+└── Resources/          # quotes.txt, note.txt, style.txt
+----
+
+== Tips
+
+Backup:: You can backup your entire `~/Forwords/` directory
+Multiple manuscripts:: Use different filenames in SAVE_FILE
+Custom locations:: Use absolute paths for complete control
+Case insensitive:: All values work regardless of case 

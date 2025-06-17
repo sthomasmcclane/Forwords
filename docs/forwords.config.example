@@ -1,0 +1,16 @@
+# Forwords Configuration File
+# Copy this file to ~/Forwords/.forwords.config and edit as needed
+# See docs/configuration.md for detailed explanations
+
+# Manuscript file (relative path for ~/Forwords/Manuscripts/, absolute for custom location)
+SAVE_FILE: manuscript.txt
+
+# Banner color (blue, green, red, yellow, magenta, cyan, white)
+BANNER_COLOR: blue
+
+# Banner style (Quote, Note, Prompt)
+DEFAULT_BANNER: Quote
+
+# GUI settings (CLI ignores these)
+GUI_THEME: light
+GUI_FONT_SIZE: 12 

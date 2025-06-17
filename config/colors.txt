@@ -1,0 +1,30 @@
+# Forwords Color Definitions
+# Format: COLOR_NAME=HEX_CODE
+# Used by both GUI and CLI versions
+
+# Banner Colors
+BLUE=#1a73e8
+RED=#ea4335
+GREEN=#34a853
+YELLOW=#fbbc05
+MAGENTA=#d93025
+CYAN=#4285f4
+WHITE=#ffffff
+
+# Theme Colors - Light
+LIGHT_WINDOW=#ffffff
+LIGHT_TEXT=#000000
+LIGHT_BANNER=#1a73e8
+LIGHT_INPUT_BG=#ffffff
+LIGHT_INPUT_TEXT=#000000
+LIGHT_BUTTON_BG=#f0f0f0
+LIGHT_BUTTON_TEXT=#000000
+
+# Theme Colors - Dark
+DARK_WINDOW=#2d2d2d
+DARK_TEXT=#ffffff
+DARK_BANNER=#8ab4f8
+DARK_INPUT_BG=#3d3d3d
+DARK_INPUT_TEXT=#ffffff
+DARK_BUTTON_BG=#3d3d3d
+DARK_BUTTON_TEXT=#ffffff 

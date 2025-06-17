@@ -1,0 +1,4 @@
+.vscode
+debug.log
+resources/
+!resources/quotes.txt

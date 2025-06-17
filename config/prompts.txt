@@ -1,0 +1,17 @@
+# Forwords Writing Prompt Components
+# Format: CATEGORY=item1,item2,item3
+# Used by both GUI and CLI versions to generate random writing prompts
+
+VOICE=formal,informal,conversational,professional,academic,playful,sarcastic,intimate,detached,poetic,technical,colloquial,elegant,rough,smooth,direct,evasive
+
+TONE=light-hearted,serious,dark,humorous,whimsical,melancholic,uplifting,suspenseful,nostalgic,mysterious,romantic,cynical,optimistic,pessimistic,neutral,dramatic,understated,intense,gentle,aggressive
+
+TENSE=past,present,future,conditional,imperative
+
+POV=first-person,second-person,third-person (limited),third-person (omniscient),third-person (objective),multiple perspectives,unreliable narrator
+
+PACE=fast,slow,steadily,frenetically,rhythmically,haltingly,smoothly,chaotically,methodically,sporadically
+
+GENRE=mystery,romance,science fiction,fantasy,historical,contemporary,thriller,comedy,drama,horror,western,adventure,literary,young adult,children's,erotica
+
+SETTING=urban,rural,suburban,desert,forest,mountain,coastal,arctic,tropical,space,underwater,underground,post-apocalyptic,medieval,futuristic,alternate history 
